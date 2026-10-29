@@ -4,7 +4,9 @@
 
 [Русская версия](README.ru.md)
 
-![A chat opened in the viewer](docs/chat-en.jpg)
+![A chat from the fictional demo export, opened in the viewer](docs/chat-en.jpg)
+
+*All screenshots show the bundled **demo export**: an invented person (Sam, a freelance designer) and made-up chats. No real conversations.*
 
 ## Why this exists
 
@@ -28,9 +30,11 @@ This tool turns that export into an archive you can browse, search and pull piec
 - **Write everything useful out as `.md`** with `--dump`: memory, projects, routines and Claude's files, in folders.
 - **English and Russian interface.** Picked from your browser, switchable in the sidebar.
 
-![Search across the whole archive](docs/search-en.jpg)
+![Search across the demo archive](docs/search-en.jpg)
 
-![The basket: a selection ready to carry over](docs/basket-en.jpg)
+![The basket in the demo archive](docs/basket-en.jpg)
+
+*Demo data, fictional.*
 
 ## Quick start
 
