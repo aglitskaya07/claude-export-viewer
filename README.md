@@ -43,7 +43,7 @@ You need Python 3.9 or newer. Macs usually have it; on Windows, install it from 
    - **Windows:** double-click `Open Claude Archive.bat`.
    - **Terminal:** `python3 viewer.py` (it looks in Downloads), or `python3 viewer.py "path/to/export"`.
 
-Your browser opens the archive. The first start indexes the export: about ten seconds for 1,400 chats.
+Your browser opens the archive. The first start indexes the export. In my case, an export of 1,400 chats (615 MB) took 10 seconds.
 
 **Just want to look first?** A fictional demo export is included:
 
