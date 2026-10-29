@@ -989,7 +989,7 @@ ru: {
   <p class="credit">Собрано Claude Code у Наили · <a class="u" href="https://nailia.work" target="_blank" rel="noopener">nailia.work</a></p>`,
 }};
 
-const getLang = () => { try { const l = localStorage.getItem('lang'); if (l) return l; } catch(e) {} return (navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en'; };
+const getLang = () => { const u = new URLSearchParams(location.search).get('lang'); if (u) return u; try { const l = localStorage.getItem('lang'); if (l) return l; } catch(e) {} return (navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en'; };
 let LANG = STR[getLang()] ? getLang() : 'en';
 let T = STR[LANG];
 
@@ -1119,8 +1119,10 @@ async function init(){
     if (a.dataset.tab === 'help') return showGuide(true);
     showTab(a.dataset.tab);
   };
-  showTab('chats');
-  showGuide();
+  await showTab('chats');
+  // deep link: #c:<chat>, #c:<chat>:<message>, #f:<file>, #n:<note>
+  const ref = decodeURIComponent(location.hash.slice(1));
+  if (/^(c|f|n):[\w-]+(:\d+)?$/.test(ref)) open(ref); else showGuide();
 }
 
 function setTabUI(){ document.querySelectorAll('nav a[data-tab]').forEach(a => a.classList.toggle('on', a.dataset.tab === tab)); }
